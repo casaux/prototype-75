@@ -75,6 +75,7 @@
          
          }
          }
+             
          
          /* DJI help text */
          $("#dji-help").html("<strong>Your DJI "+DJIModel+" serial number is 14 characters and will start with:<br> <span style='font-size:1.5rem; font-family:monaco'>"+DJIPrefix+"</span></strong>");
@@ -204,18 +205,22 @@
           
          if($(this).val()==2){
           $("#home-build").css("display","none");
+             $("#no-serial").css("display","none");
           $(".default-values").css("display","block");
          }
          else if($(this).val()==3){
           $("#home-build").css("display","none");
+             $("#no-serial").css("display","block");
           $(".default-values").css("display","block");
          }
          	   else if($(this).val()==4){
           $("#home-build").css("display","none");
+                   $("#no-serial").css("display","block");
           $(".default-values").css("display","block");
          }
          else {
           $("#home-build").css("display","block");
+             $("#no-serial").css("display","block");
           $(".default-values").css("display","none");
          }
          
@@ -417,41 +422,64 @@
                            <div id="dji-list" style="display:none;">
                               <select id="model-name-version" class="au-select au-select--block model-name-version">
                                  <option value="0">Please select model name and version</option>
-                                 <option value="1">Tello</option>
-                                 <option value="2">Spark</option>
-                                 <option value="3">Mavic Air</option>
-                                 <option value="4">Mavic Pro</option>
-                                 <option value="5">Mavic2</option>
-                                 <option value="6">Mavic2 (1 inch)</option>
-                                 <option value="7">Mavic 2 Enterprise</option>
-                                 <option value="8">Mavic 2 Enterprise Due</option>
-                                 <option value="9">Phantom 3 SE</option>
-                                 <option value="10">Phantom 4</option>
-                                 <option value="11">Phantom 4 Pro</option>
-                                 <option value="12">Phantom 4 Pro V2.0</option>
-                                 <option value="13">Phantom 4 RTK</option>
-                                 <option value="14">Inspire 2</option>
-                                 <option value="15">M100</option>
-                                 <option value="16">M200</option>
-                                 <option value="17">M200 V2</option>
-                                 <option value="18">M210</option>
-                                 <option value="19">M210 RTK</option>
-                                 <option value="20">M210 RTK V2 (RTK)</option>
-                                 <option value="21">M210 V2</option>
-                                 <option value="22">M600</option>
-                                 <option value="23">M600 2.0</option>
-                                 <option value="24">M600 Pro</option>
-                                 <option value="25">MG-1</option>
-                                 <option value="26">MG-1P</option>
-                                 <option value="27">MG-1S</option>
-                                 <option value="28">MG-1S Advance</option>
-                                 <option value="29">S1000</option>
-                                 <option value="30">S1000+</option>
-                                 <option value="31">S900</option>
-                                 <option value="32">T16</option>
-                                 <option value="33">WIND-4</option>
-                                 <option value="34">WIND-8</option>
-                                 <option value="35">Other</option>
+
+                                  <option value="1">FPV</option>
+<option value="2">Goggles</option>   
+<option value="3">Inspire 1 V2.0</option>  
+<option value="4">Inspire 2</option> 
+<option value="5">M100</option>
+<option value="6">M200</option>
+<option value="7">M200</option>   
+<option value="8">M210</option>
+<option value="9">M210 RTK</option>
+<option value="10">M210 RTK V2</option>
+<option value="11">M210 V2</option>
+<option value="12">M600</option>
+<option value="13">M600 2.0</option>
+<option value="14">M600 PRO</option>
+<option value="15">Mavic 2</option>
+<option value="16">Mavic 2 (1 inch)</option>    
+<option value="17">Mavic 2 Enterprise</option>
+<option value="18">Mavic 2 Enterprise Duel</option>  
+<option value="19">Mavic Air</option>
+<option value="20">Mavic Air 2</option>
+<option value="21">Mavic Mini</option>
+<option value="22">Mavic Mini 2</option> 
+<option value="23">Mavic Pro</option>
+<option value="24">Mavic Pro Platinum</option> 
+<option value="25">MG-1</option>
+<option value="26">MG-1P</option>
+<option value="27">MG-1P RTK</option>  
+<option value="28">MG-1S</option>
+<option value="29">MG-1S advance</option>
+<option value="30">MG-A</option>
+<option value="31">MG-P</option>
+<option value="32">MG-S</option>
+<option value="22">Mini 2</option>                                   
+<option value="33">P4 Multispecial</option>  
+<option value="34">Phantom 3 4K</option>
+<option value="35">Phantom 3 Advanced</option>
+<option value="36">Phantom 3 Professional</option>
+<option value="37">Phantom 3 SE</option>
+<option value="38">Phantom 3 Standard</option>
+<option value="39">Phantom 4</option>
+<option value="40">Phantom 4 ADV</option>
+<option value="41">Phantom 4 ADV+</option>
+<option value="42">Phantom 4 Pro 2.0</option>
+<option value="43">Phantom 4 Pro 2.0+</option>  
+<option value="44">Phantom 4 Pro</option>
+<option value="45">Phantom 4 Pro+</option>
+<option value="46">Phantom 4 RTK</option> 
+<option value="47">Spark</option>   
+<option value="48">S1000</option>
+<option value="49">S1000+</option>
+<option value="50">S900</option>
+<option value="51">T16</option>
+<option value="52">T20</option>   
+<option value="53">Tello</option>
+<option value="54">WIND-4</option>
+<option value="55">WIND-8</option>
+                                  
                               </select>
                            </div>
                            <div id="parrot-list" style="display:none;">
@@ -521,50 +549,40 @@
                                  <option value="6">Powered Lift</option>
                               </select>
                            </div>
-                           <br>
-                           <label class="au-label" for="text-input-block1">Drone weight (grams)</label>
-                           <span class="au-hint-text">
-                              Please enter your drone weight in grams. The weight of your drone includes fuel, accessories or attachments such as cameras or gimbals.
-                           </span>
-                           <input class="au-text-input au-text-input--block" name="text-input-block1" id="text-input-block1" type="text" value="">
-                        </div>
+                           </div>
+                         
+                         
+                         
+                         <div class="au-form-group">				
+<label class="au-label" for="select1block">Weight class</label>
+    <span class="au-hint-text">Please select your drone weight class. The weight of your drone includes fuel, accessories or attachments such as cameras or gimbals.</span>
+<select id="select1block" class="au-select au-select--block">
+    <option value="1">Please select weight class</option>
+   <option value="1">Less than 500g</option>
+  <option value="2">More than 500g but not more than 2kg</option>
+  <option value="3">More than 25kg but not more than 150kg</option>
+</select>
+                         </div>
+                                              <div class="au-form-group">
+                         <div class="au-callout">
+                             <p>If your drone weighs more than 150kg you are required to register it as a <a href="#">VH registered aircraft</a>.</p>
+                         </div>
+
+    </div>
                      </div>
                      <div id="dji-weight" class="au-callout" style="margin-bottom: 1 rem; display: none">
                      </div>
-                     <div class="au-form-group">
-                        <label for="text-input-block3" class="au-label">Serial number</label>
-                        <span class="au-hint-text">
-                        Please enter your drone serial number. <a href="casa-drone-serial-numbers.html" target="_blank">How do I find this?</a> 
-                        </span>
-                        <div id="dji-help" class="au-callout" style="margin-bottom: 1rem; display: none">
-                        </div>
-                     </div>
-                     <input class="au-text-input au-text-input--block" name="text-input-block3" id="text-input-block3" type="text" value="">
-                     <div>
-                        <span class="" style="display:none;"><strong>Serial number incorrect for this drone type</strong></span>
-                        </section>	
-                     </div>
-                     <div class="au-form-group">
-                        <label class="au-control-input">
-                        <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="no-serial">
-                        <span class="au-control-input__text">No serial number available</span>
-                        </label>
-                     </div>
-                     <div id="no-serial-callout" style="display:none;">
-                        <div class="au-form-group">
-                           <p class="au-callout">
-                              If your drone doesn't have a serial number or you can't find it, CASA will generate a registration number for you. You will receive the number after your registration is complete. You must affix this number to your drone.</abbr>
-                           </p>
-                        </div>
-                     </div>
-                     <div id="weight-info" style="display:none;">
+                      
+                      <div id="weight-info" style="display:none;">
                         <div class="au-form-group">
                            <div class="au-callout">
                               <p><strong>Manufactured weight:</strong> 3kg<br>
                                  <strong>Assigned weight class:</strong> More than 2kg but not more than 25kg
                               </p>
                               <p>We have assigned a weight class based on the manufactured weight of your drone. The weight class must include all components, fuel and modifications made such as cameras or gimbals.</p>
-                              <p>If this is incorrect please <a href="#" onClick="show('update'); return false;" >update the weight class of this drone</a></p>
+                              <p>If this is incorrect please <a href="#" onClick="show('update'); return false;" >update the weight class of this drone.</a></p>
+                               
+                               <p>If your drone weighs more than 150kg you are required to register it as a <a href="#">VH registered aircraft</a>.</p>
                            </div>
                         </div>
                      </div>
@@ -581,7 +599,37 @@
 </select>
                          </div>
 
-    </div>
+             </div>
+                      
+                     <div class="au-form-group">
+                        <label for="text-input-block3" class="au-label">Serial number</label>
+                        <span class="au-hint-text">
+                        Please enter your drone serial number. <strong><a href="casa-drone-serial-numbers.html" target="_blank">How do I find this?</a></strong> 
+                        </span>
+                        <div id="dji-help" class="au-callout" style="margin-bottom: 1rem; display: none">
+                        </div>
+                     <input class="au-text-input au-text-input--block" name="text-input-block3" id="text-input-block3" type="text" value="">
+                         </div>
+                     <div>
+                        <span class="" style="display:none;"><strong>Serial number incorrect for this drone type</strong></span>
+                        </section>	
+                     </div>
+                   <div id="no-serial">
+                     <div class="au-form-group">
+                        <label class="au-control-input">
+                        <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="no-serial">
+                        <span class="au-control-input__text">No serial number available</span>
+                        </label>
+                     </div>
+                   </div>
+                     <div id="no-serial-callout" style="display:none;">
+                        <div class="au-form-group">
+                           <p class="au-callout">
+                              If your drone doesn't have a serial number or you can't find it, CASA will generate a registration number for you. You will receive the number after your registration is complete. You must affix this number to your drone.</abbr>
+                           </p>
+                        </div>
+                     </div>
+                     
                      <div class="au-form-group">
                         <label class="au-label">What is the intended use of your drone?</label>
                      </div>
@@ -598,8 +646,7 @@
                      <div id="commercial" style="display: none;">
                         <div class="au-form-group">
                            <div class="au-callout">
-                              <p>Drones (<abbr title="Remotely piloted aircraft">RPA</abbr>) registered for business or commercial use must be <a href="#">registered by the owner</a>. If the drone is owned by an organisation, the registration must be in the name of that organisation using their ARN.<br><br>
-                                 If your drone weighs more than 150kg you are required to register it as a <a href="#">VH Registered Aircraft</a>.
+                              <p>Drones (<abbr title="Remotely piloted aircraft">RPA</abbr>) registered for business or commercial use must be <a href="#">registered by the owner</a>. If the drone is owned by an organisation, the registration must be in the name of that organisation using their ARN.
                               </p>
                            </div>
                         </div>
