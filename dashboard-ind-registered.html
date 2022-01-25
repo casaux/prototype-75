@@ -6,11 +6,12 @@
     <title>myCASA</title>
       <meta name="viewport" content="width=device-width">
       <meta name="viewport" content="initial-scale=1">
-      <link rel="stylesheet" href="../mycasa-src-4.0/css/designsystem.min.css">
-      <link rel="stylesheet" href="../mycasa-src-4.0/css/casa.css">
-      <script type="text/javascript" src="../mycasa-src-4.0/js/designsystem.min.js"></script>
-      <script type="text/javascript" src="../mycasa-src-4.0/js/jquery.min.js"></script>
-      <script type="text/javascript" src="../mycasa-src-4.0/js/jquery.js"></script>
+      <link rel="stylesheet" href="../mycasa-src-5.0/css/designsystem.min.css">
+      <link rel="stylesheet" href="../mycasa-src-5.0/css/casa.css">
+	<link rel="stylesheet" href="../mycasa-src-5.0/css/drap.css">
+      <script type="text/javascript" src="../mycasa-src-5.0/js/designsystem.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src-5.0/js/jquery.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src-5.0/js/jquery.js"></script>
       <script type="text/javascript">
         /* page specific js */
 
@@ -25,34 +26,38 @@
 
 <body class="live-demo au-body au-grid casa-dashboard">
     <main class="au-grid">
-        <div class="header">
+         <div class="drap-header-2">
             <div class="container">
-                <div class="row">
-                    <div class="logo au-body au-body--dark">
-                        <a href="index.html"><img src="../mycasa-src-3.0/img/CASALOGO-white-i.svg"></a>
-                    </div>
+               <div class="row">
+                  <div class="logo au-body--drap-dark-2">
+                     <a href="index.html"><img src="../mycasa-src-5.0/img/CASALOGO-white-i.svg"></a>
+                  </div>
+                  <div class="casa-menu">
 
-                    <div class="casa-sign-out">
+                  	<div id="dropdown-menu">
+						<div id="dd-menu"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/menu.png" height="20" />Menu</a></div>
+						<div id="dd-close"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/close.png" height="20" />Close</a><br />
+						<br />
+						<p id="mycasa-home"><a href="#">myCASA home</a></p>
+						<p><a href="dashboard-select.html">Switch profile</a></p>
+						<p><a href="mycasa-signed-out.html">Sign out</a></p>
+						</div>
 
-                        <div class="au-body au-body--dark">
-                            <a class="au-btn au-btn--dark" href="signed-out.html">Sign out</a>
-                        </div>
 
-                    </div>
-
-                </div>
+                  </div>
+               </div></div>
             </div>
-        </div>
-        <div class="body">
-            <div class="banner">
-                <div class=container>
-                    <div class="row">
-                        <div class="col-md-12">
-                            This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+         </div>
+         <div class="body">
+			<div class="darp-banner">
+				<div class=container>
+					<div class="row">
+					 <div class="col-md-12">
+				This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
+				</div>
+				</div>
+			</div>
+		</div>
 
             <div class="container">
 
@@ -62,7 +67,7 @@
                     </div>
                     <div class="casa-profile-link col-lg-6 col-md-12 col-xs-12 col-lg-12-align-right">
                         <ul>
-                            <li><a href="profile.html">View profile</a></li>
+                          
                            <!-- <li><a href="dashboard-select.html">Switch profile</a></li>-->
                         </ul>
                     </div>
@@ -70,7 +75,7 @@
                 </div>
 
                 <header class="au-header" role="banner">
-                    <h1 class="break desktop au-header-heading au-display-xl">Welcome to myCASA</h1>
+                    <h1 class="break desktop au-header-heading au-display-xl">Welcome to Drone Registration and Accreditation Portal (DRAP)</h1>
                 </header>
  <!--<div class="casa-dashboard-row row">
 
@@ -130,7 +135,7 @@
 
                 <!-- row 3 - licences  -->
 
-                <div class="casa-dashboard-row row">
+           <!--     <div class="casa-dashboard-row row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
                         <h2 class="au-display-lg">Licences and authorisations</h2>
                     </div><!--
@@ -152,12 +157,13 @@
                     </div>
 
 -->
-                    <div class="casa-dashboard-item col-lg-6 col-md-6 col-xs-12">
+				<!--
+                  <div class="casa-dashboard-item col-lg-6 col-md-6 col-xs-12">
                         <h3 class="au-display-sm"><a href="../licence-view-verification/index.html#verify.html" target="_blank">Confirm details of a digital licence</a></h3>
                         <p>Scan and confirm the details of a flight crew licence (digital view of licence) or remote pilot licence (RePL) digital licence</p>
                     </div>
                 </div>
-
+-->
 
                 <!-- row 4 - applications and notifications  
 
@@ -216,9 +222,13 @@
 
                 <div class="casa-dashboard-row row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
-                        <h2 class="au-display-lg">Drones and <abbr title="Remotely Piloted Aircraft">RPA</abbr></h2>
+                        <h2 class="au-display-lg">Registration and accreditation</h2>
                     </div>
+<div class="casa-dashboard-item col-lg-6 col-md-6 col-xs-12">
+                        <h3 class="au-display-sm"><a href="#">Drone registration</a></h3>
 
+                        <p>Register your drones and <abbr title="Remotely Piloted Aircraft">RPA</abbr></p>
+                    </div>
                     <div class="casa-dashboard-item col-lg-6 col-md-6 col-xs-12">
                         <h3 class="au-display-sm"><a href="#">Drone accreditation</a></h3>
 
@@ -241,32 +251,23 @@
 
                 <!-- row 7 - training and learning  -->
 
-                <div class="casa-dashboard-row row">
-                    <div class="col-lg-12 col-md-12 col-xs-12">
-                        <h2 class="au-display-lg">Training and learning</h2>
-                    </div>
-
-                    <div class="casa-dashboard-item col-lg-6 col-md-6 col-xs-12">
-                        <h3 class="au-display-sm"><a href="#">AviationWorx</a></h3>
-
-                        <p>Access to CASA e-learning and other training</p>
-                    </div>
-
-
-                </div>
+              
 
 
                 <!-- row 8 - orgs  -->
 
-                <div class="casa-dashboard-row row">
+                
+				
+				
+                                <div class="casa-dashboard-row row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
-                        <h2 class="au-display-lg">Organisations and businesses</h2>
+                        <h2 class="au-display-lg">myCASA</h2>
                     </div>
 
                     <div class="casa-dashboard-item col-lg-6 col-md-6 col-xs-12">
-                        <h3 class="au-display-sm"><a href="../org-arn/org-details.html">Organisation aviation reference number (<abbr title="Aviation reference number">ARN</abbr>)</a></h3>
+                        <h3 class="au-display-sm"><a href="dashboard-ind.html" class="casa-external">myCASA</a></h3>
 
-                        <p>Apply for an organisation ARN or link to an organisation with an ARN</p>
+                        <p>Access myCASA services</p>
                     </div>
 
 
@@ -276,7 +277,7 @@
 
                 <div class="casa-dashboard-row row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
-                        <h2 class="au-display-lg">Submission summary</h2>
+                        <h2 class="au-display-lg">Registration submission summary</h2>
                     </div>
 
                       <div class="casa-dashboard-item col-lg-6 col-md-6 col-xs-12">
